@@ -6,15 +6,10 @@ applications:
   memory: 1G
   instances: 1
   env:
-<<<<<<< HEAD
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
-=======
     GRANT_TYPE: client_credentials
-    SPRING_SECURITY_USER_NAME: actuator
-    SPRING_SECURITY_USER_PASSWORD: operations4red
-    SPRING_SECURITY_USER_ROLES: ACTUATOR
->>>>>>> 0f0cf2c... Add security
   services:
   - tracker-registration-database
   - tracker-service-registry
   - tracker-sso
+  - tracker-config-server

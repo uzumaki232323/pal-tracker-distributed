@@ -17,6 +17,7 @@ dependencies {
     // See https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Migration-Guide#oauth2
     compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
     compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-config-client"
 
     compile "com.zaxxer:HikariCP:$hikariVersion"
     compile "mysql:mysql-connector-java:$mysqlVersion"
@@ -32,5 +33,10 @@ bootRun.environment([
     "EUREKA_CLIENT_OAUTH2_CLIENTID": "eureka-client",
     "SPRING_SECURITY_USER_NAME": "actuator",
     "SPRING_SECURITY_USER_PASSWORD": "operations4red",
-    "SPRING_SECURITY_USER_ROLES": "ACTUATOR"
+    "SPRING_SECURITY_USER_ROLES": "ACTUATOR",
+    "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
+])
+
+test.environment([
+    "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
 ])
