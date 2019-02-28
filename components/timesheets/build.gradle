@@ -3,5 +3,6 @@ dependencies {
     compile "org.springframework:spring-jdbc:$springVersion"
     compile "com.netflix.hystrix:hystrix-javanica:$hystrixJavanicaVersion"
 
+
     testCompile project(":components:test-support")
 }

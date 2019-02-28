@@ -3,11 +3,8 @@ package io.pivotal.pal.tracker.backlog;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-<<<<<<< HEAD
-=======
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
->>>>>>> a31c4e0... Enable circuit breaker
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestOperations;
@@ -15,11 +12,8 @@ import org.springframework.web.client.RestOperations;
 import java.util.TimeZone;
 
 
-<<<<<<< HEAD
-=======
 @EnableCircuitBreaker
 @EnableEurekaClient
->>>>>>> a31c4e0... Enable circuit breaker
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.backlog", "io.pivotal.pal.tracker.restsupport"})
 public class App {
